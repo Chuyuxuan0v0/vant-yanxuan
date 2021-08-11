@@ -1,14 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <van-row type="flex" justify="space-between">
+      <van-col span="7"><div class="logo"></div></van-col>
+      <van-col span="7">span: 6</van-col>
+      <van-col span="7">span: 6</van-col>
+    </van-row>
+    <router-view />
   </div>
 </template>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,17 +17,14 @@
   text-align: center;
   color: #2c3e50;
 }
+.logo {
+  /* 图片垂直居中 */
+  height: 40px;
+  width: 150px;
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  vertical-align: middle;
+  background: url("./assets/tietu.png") -115px -250px;
+  transform: scale(0.8);
+  display: inline-block;
 }
 </style>
